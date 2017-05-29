@@ -1,0 +1,53 @@
+ext {
+    minSdkVersion = 16
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    buildToolVersion = '25.0.2'
+}
+
+def androidToolsVersion = '25.3.1'
+def supportLibraryVersion = '25.3.1'
+def constraintLayoutVersion = '1.0.2'
+def picassoVersion = '2.5.2'
+def rxJavaVersion = '2.0.9'
+def rxAndroidVersion = '2.0.1'
+def rxLifeCycleVersion = '2.0.1'
+def retrofitVersion = '2.2.0'
+def moshiVersion = '1.4.0'
+def mockitoVersion = "2.+"
+def dagger2Version = "2.10"
+
+ext.deps = [
+        //Android support
+        appCompatv7          : "com.android.support:appcompat-v7:$androidToolsVersion",
+        constrainLayouts     : "com.android.support.constraint:constraint-layout:$constraintLayoutVersion",
+        supportDesign        : "com.android.support:design:$supportLibraryVersion",
+
+        //Image loading
+        picasso              : "com.squareup.picasso:picasso:$picassoVersion",
+
+        //Rx
+        rxJava               : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+        rxAndroid            : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+
+        //Rx lifecycle
+        rxLifeCycle          : "com.trello.rxlifecycle2:rxlifecycle:$rxLifeCycleVersion",
+        rxLifeCycleAndroid   : "com.trello.rxlifecycle2:rxlifecycle-android:$rxLifeCycleVersion",
+        rxLifeCycleComponents: "com.trello.rxlifecycle2:rxlifecycle-components:$rxLifeCycleVersion",
+        rxLifeCycleKotlin    : "com.trello.rxlifecycle2:rxlifecycle-kotlin:$rxLifeCycleVersion",
+
+        //Retrofit
+        retrofit             : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+
+        //Rx Retrofit Adapter
+        rxRetrofitAdapter    : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+        moshi                : "com.squareup.moshi:moshi:$moshiVersion",
+        moshiConverterFactory: "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+
+        //Mockito
+        mockito              : "org.mockito:mockito-core:$mockitoVersion",
+
+        //DI
+        dagger               : "com.google.dagger:dagger:$dagger2Version",
+        daggerApt            : "com.google.dagger:dagger-compiler:$dagger2Version"
+]
